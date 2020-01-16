@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { INPUT_NAME } from 'config/text'
-import { inputName } from 'redux/actions'
+import { inputSendName } from 'redux/actions'
 
 class TopSendName extends Component {
   constructor(props) {
     super(props);
-    this.state = {input: ''};
+    this.state = {input: '', disabled: true};
   }
 
   updataInput = input => {
-    this.setState({ input });
+    this.setState({ input, disabled: input ? false : true });
   };
 
   handleSendName = () => {    
-    this.props.inputName(this.state.input);
+    this.props.inputSendName(this.state.input);
     this.setState({input: ''});
     this.props.transition();
   };
@@ -32,7 +32,7 @@ class TopSendName extends Component {
             value={this.state.name}
           />
         </label>
-        <button className='send_name' onClick={(this.handleSendName)}>
+        <button className='send_name' onClick={(this.handleSendName)} disabled={this.state.disabled}>
           Send name
         </button>
       </div>
@@ -40,4 +40,4 @@ class TopSendName extends Component {
   }
 }
 
-export default connect(null, {inputName})(TopSendName);
+export default connect(null, {inputSendName})(TopSendName);
