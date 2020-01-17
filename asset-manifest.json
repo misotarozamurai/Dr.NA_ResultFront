@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/misotarozamurai/Dr.NA_ResultFront/static/css/main.3e616412.chunk.css",
+    "main.js": "/misotarozamurai/Dr.NA_ResultFront/static/js/main.903aa5da.chunk.js",
+    "main.js.map": "/misotarozamurai/Dr.NA_ResultFront/static/js/main.903aa5da.chunk.js.map",
+    "runtime-main.js": "/misotarozamurai/Dr.NA_ResultFront/static/js/runtime-main.9ae137d0.js",
+    "runtime-main.js.map": "/misotarozamurai/Dr.NA_ResultFront/static/js/runtime-main.9ae137d0.js.map",
+    "static/js/2.c436e885.chunk.js": "/misotarozamurai/Dr.NA_ResultFront/static/js/2.c436e885.chunk.js",
+    "static/js/2.c436e885.chunk.js.map": "/misotarozamurai/Dr.NA_ResultFront/static/js/2.c436e885.chunk.js.map",
+    "index.html": "/misotarozamurai/Dr.NA_ResultFront/index.html",
+    "precache-manifest.437f52a05bbeb332c56d2e40806a2912.js": "/misotarozamurai/Dr.NA_ResultFront/precache-manifest.437f52a05bbeb332c56d2e40806a2912.js",
+    "service-worker.js": "/misotarozamurai/Dr.NA_ResultFront/service-worker.js",
+    "static/css/main.3e616412.chunk.css.map": "/misotarozamurai/Dr.NA_ResultFront/static/css/main.3e616412.chunk.css.map",
+    "static/js/2.c436e885.chunk.js.LICENSE": "/misotarozamurai/Dr.NA_ResultFront/static/js/2.c436e885.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ae137d0.js",
+    "static/js/2.c436e885.chunk.js",
+    "static/css/main.3e616412.chunk.css",
+    "static/js/main.903aa5da.chunk.js"
+  ]
+}
