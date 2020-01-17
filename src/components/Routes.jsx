@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 
 import * as routes from 'config/route'
 
-import Auth from 'components/Auth'
+// import Auth from 'components/Auth'
 import Top from 'components/pages/Top'
-import Result from 'components/pages/Result'
+import Result from 'container/GetResultContainer'
 
 // ----- Screen transition -----
 export default class Routes extends Component {
@@ -15,11 +15,7 @@ export default class Routes extends Component {
         <Router>
           <Switch>
             <Route path={routes.TOP_PAGE} exact component={Top}/>
-            <Auth>
-              <Switch>
-                <Route path={routes.RESULT_PAGE} exact component={Result}/>
-              </Switch>
-            </Auth>
+            <Route path={routes.RESULT_PAGE} exact component={Result}/>
             <Route exact component={Top}/>
           </Switch>
         </Router>
