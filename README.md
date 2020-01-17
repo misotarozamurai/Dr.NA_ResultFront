@@ -15,7 +15,7 @@ $ cd my-app
 
 ## ■ インストール
 
-- `Sass` の利用
+- Sass
 
   ``` shell
   $ npm i -D node-sass
@@ -39,17 +39,35 @@ $ cd my-app
   $ npm i -S react-redux
   ```
 
+- Redux 非同期
+
+  ``` shell
+  $ npm i -S redux-thunk
+  ```
+
+- Redux 開発用ログ
+
+  ``` shell
+  $ npm i -S redux-logger
+  ```
+
+- REST API
+
+  ``` shell
+  $ npm i -S axios
+  ```
+
 ## ■ 設定
 
 - 環境変数
 
-  - 開発環境 【 <a href=".env.development">.env.development</a> 】
+  - 開発環境 【 <a href=".env.development.sample">.env.development</a> 】
 
     ``` shell
     $ touch .env.development
     ```
 
-  - 本番環境 【 <a href=".env.production">.env.production</a> 】
+  - 本番環境 【 <a href=".env.production.sample">.env.production</a> 】
 
     ``` shell
     $ touch .env.production
@@ -85,6 +103,7 @@ $ cd my-app
     - `pages` => 個々のページのJSX
     - `ui` => UI部品のJSX
   - `config/` => `components` 内で使用する設定(定数など)
+  - `container` => Reduxのstoreに格納されているデータをComponentに紐付ける
   - `images/` => 画像ファイル等
   - `redux/` => Redux
     - `reducers` => Reducers
