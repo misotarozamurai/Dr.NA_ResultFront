@@ -1,21 +1,33 @@
 import React, { Component } from 'react'
-import { getNameText } from 'redux/selectors/name'
 import { connect } from 'react-redux'
+// ----- JSX -----
+import Header from 'components/layouts/Header'
+import LineUserName from 'components/ui/LineUserName'
+import GetResultContainer from 'containers/GetResultContainer'
+import LineLastMessage from 'components/ui/LineLastMessage'
+// ----- style -----
+import Style from 'stylesheet/style.module.sass'
 
 class Result extends Component {
   render() {
     return (
-      <div>
-        <p className='user_name'>ユーザー：{this.props.name}</p>
-        <p className='user_name'>日付：{this.props.data.datatime}</p>
-        <p className='user_name'>脈平均：{this.props.data.pulse.avg}</p>
-        <p className='user_name'>病名：{this.props.data.sick.name}</p>
-        <p className='user_name'>説明：{this.props.data.sick.message}</p>
+      <div className={Style.result_page}>
+        <Header dateTime={this.props.time}/>
+        <div className={Style.message_area}>
+          <LineUserName />
+          <GetResultContainer />
+          <LineLastMessage />
+        </div>
       </div>
     );
   }
 }
 
-const MapStateToProps = state => state.name
+const mapStateToProps = state => {
+  const length = state.result.length;
+  const current_state = state.result[length - 1];
+  const time = current_state.data.jsonObj['datatime'];
+  return {time: time};
+}
 
-export default connect(MapStateToProps)(Result);
+export default connect(mapStateToProps)(Result);
