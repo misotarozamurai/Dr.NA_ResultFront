@@ -28,7 +28,7 @@ class TopSendName extends Component {
     return (
       <form onSubmit={this.handleSendName} className={Style.from_name}>
         <label htmlFor='name' className={Style.label_name}>
-          {INPUT_NAME.label}
+          {INPUT_NAME.label_line}
           <input 
             type='text'
             id='name'
@@ -38,12 +38,13 @@ class TopSendName extends Component {
             className={Style.input_name}
           />
         </label>
-        <input 
+        <button 
           type='submit'
           className={Style.send_name}
           disabled={this.state.disabled}
-          value= {BUTTON_SEND}
-        />
+        >
+          {BUTTON_SEND}
+        </button>
       </form>
     );
   }
