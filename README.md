@@ -2,6 +2,9 @@
 
 name : Masakatsu Shibata
 
+こちらは開発者向けのREADME になります。<br />
+アプリケーションの使用方法に関しては、<a href="./readme/README.md">README</a> を参照してください。
+
 ## ■ 準備
 
 ローカル開発マシンにNode 8.16.0またはNode 10.16.0以降のバージョンが必要
