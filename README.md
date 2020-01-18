@@ -21,6 +21,19 @@ $ cd my-app
   $ npm i -D node-sass
   ```
 
+- Saas をモジュールする
+  - ejectせずに、webpack, babel, estlintなどの設定を上書きするツールと、css moduleを有効にするプラグインを使って実現
+
+    ``` shell
+    $ npm i -D react-app-rewired codebandits/react-app-rewire-css-modules
+    ```
+  
+  - プラグインがsass-loaderとnode-sassに依存してるのでこれも追加
+
+    ``` shell
+    $ npm i -D sass-loader node-sass 
+    ```
+
 - ルーティング
 
   ``` shell
@@ -57,7 +70,39 @@ $ cd my-app
   $ npm i -S axios
   ```
 
+- GitHub Pages
+
+  ``` shell
+  $ npm i -D gh-pages
+  ```
+
 ## ■ 設定
+
+- Saas Module
+
+  - <a href="./config-overrides.js">config-overrides.js</a> を作って、設定を記述
+
+    ``` shell
+    $ touch config-overrides.js
+    ```
+
+  - <a href="./package.json">package.json</a> のscriptsを変更
+
+    ``` json
+    {
+      "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test --env=jsdom"
+      }
+    }
+    ```
+
+  - css moduleを有効にしたいsassファイルの拡張子を `.sass`から `.module.sass`に変える
+
+    ``` js
+    import style from 'style.module.sass'
+    ```
 
 - 環境変数
 
@@ -103,7 +148,7 @@ $ cd my-app
     - `pages` => 個々のページのJSX
     - `ui` => UI部品のJSX
   - `config/` => `components` 内で使用する設定(定数など)
-  - `container` => Reduxのstoreに格納されているデータをComponentに紐付ける
+  - `containers` => Reduxのstoreに格納されているデータをComponentに紐付ける
   - `images/` => 画像ファイル等
   - `redux/` => Redux
     - `reducers` => Reducers
@@ -127,6 +172,12 @@ $ cd my-app
 
   ``` shell
   $ npm run build
+  ```
+
+- GitHub Pages
+
+  ``` shell
+  $ npm run deploy
   ```
 
 <p>&copy;2020 Dr.NA_ResultFront</p>
