@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cebbbf300d04ee9be2f732aa1c5e208",
+    "revision": "4cd9dee63a4e65756df5a7f1cd7f256e",
     "url": "/Dr.NA_ResultFront/index.html"
   },
   {
-    "revision": "7ffa22e3676e5dff65f4",
-    "url": "/Dr.NA_ResultFront/static/css/main.0e7c5a10.chunk.css"
+    "revision": "5351e394165f752cf24e",
+    "url": "/Dr.NA_ResultFront/static/css/main.b9f7e063.chunk.css"
   },
   {
     "revision": "ac7be66b896aaf1fd848",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dr.NA_ResultFront/static/js/2.0cdff8cd.chunk.js.LICENSE"
   },
   {
-    "revision": "7ffa22e3676e5dff65f4",
-    "url": "/Dr.NA_ResultFront/static/js/main.85ede583.chunk.js"
+    "revision": "5351e394165f752cf24e",
+    "url": "/Dr.NA_ResultFront/static/js/main.f9ce71a2.chunk.js"
   },
   {
     "revision": "3be3b66905ea11bcca79",
     "url": "/Dr.NA_ResultFront/static/js/runtime-main.91b30654.js"
+  },
+  {
+    "revision": "817c7a3d38d528f23ec7fe85b29752b6",
+    "url": "/Dr.NA_ResultFront/static/media/dna_top.817c7a3d.jpg"
   },
   {
     "revision": "413a269f6e9babae832429a6a458909f",
