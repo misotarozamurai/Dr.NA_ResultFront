@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Dr.NA_ResultFront/static/css/main.b9f7e063.chunk.css",
-    "main.js": "/Dr.NA_ResultFront/static/js/main.f9ce71a2.chunk.js",
-    "main.js.map": "/Dr.NA_ResultFront/static/js/main.f9ce71a2.chunk.js.map",
+    "main.css": "/Dr.NA_ResultFront/static/css/main.e234db68.chunk.css",
+    "main.js": "/Dr.NA_ResultFront/static/js/main.37d0d93c.chunk.js",
+    "main.js.map": "/Dr.NA_ResultFront/static/js/main.37d0d93c.chunk.js.map",
     "runtime-main.js": "/Dr.NA_ResultFront/static/js/runtime-main.91b30654.js",
     "runtime-main.js.map": "/Dr.NA_ResultFront/static/js/runtime-main.91b30654.js.map",
-    "static/js/2.0cdff8cd.chunk.js": "/Dr.NA_ResultFront/static/js/2.0cdff8cd.chunk.js",
-    "static/js/2.0cdff8cd.chunk.js.map": "/Dr.NA_ResultFront/static/js/2.0cdff8cd.chunk.js.map",
+    "static/js/2.4e7881c2.chunk.js": "/Dr.NA_ResultFront/static/js/2.4e7881c2.chunk.js",
+    "static/js/2.4e7881c2.chunk.js.map": "/Dr.NA_ResultFront/static/js/2.4e7881c2.chunk.js.map",
     "index.html": "/Dr.NA_ResultFront/index.html",
-    "precache-manifest.d98d72eb447f7865e6a89c08b8f6e817.js": "/Dr.NA_ResultFront/precache-manifest.d98d72eb447f7865e6a89c08b8f6e817.js",
+    "precache-manifest.5c996c739fab0bfbb9a7173ac66ae195.js": "/Dr.NA_ResultFront/precache-manifest.5c996c739fab0bfbb9a7173ac66ae195.js",
     "service-worker.js": "/Dr.NA_ResultFront/service-worker.js",
-    "static/css/main.b9f7e063.chunk.css.map": "/Dr.NA_ResultFront/static/css/main.b9f7e063.chunk.css.map",
-    "static/js/2.0cdff8cd.chunk.js.LICENSE": "/Dr.NA_ResultFront/static/js/2.0cdff8cd.chunk.js.LICENSE",
+    "static/css/main.e234db68.chunk.css.map": "/Dr.NA_ResultFront/static/css/main.e234db68.chunk.css.map",
+    "static/js/2.4e7881c2.chunk.js.LICENSE": "/Dr.NA_ResultFront/static/js/2.4e7881c2.chunk.js.LICENSE",
     "static/media/style.module.sass": "/Dr.NA_ResultFront/static/media/dna_top.817c7a3d.jpg",
     "static/media/icon.png": "/Dr.NA_ResultFront/static/media/icon.413a269f.png",
     "static/media/top_logo.png": "/Dr.NA_ResultFront/static/media/top_logo.02ea362a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.91b30654.js",
-    "static/js/2.0cdff8cd.chunk.js",
-    "static/css/main.b9f7e063.chunk.css",
-    "static/js/main.f9ce71a2.chunk.js"
+    "static/js/2.4e7881c2.chunk.js",
+    "static/css/main.e234db68.chunk.css",
+    "static/js/main.37d0d93c.chunk.js"
   ]
 }
