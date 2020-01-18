@@ -6,18 +6,20 @@
 // App.jsx
 .app
 
+.app_result
 
-// Routes.jsx
-.wrapper
-
-// ----- layouts -----
+// --------------------------------------------------
+// layouts
+// --------------------------------------------------
 // Header.jsx
 .header
   background: $backColor
-  height: 30px
+  height: $headerHeight
 .header_title
+  width: $headerTitleWidth
 
-// Footer.jsx
+
+// ----- フッター[Footer.jsx] -----
 .footer
   // テキストをボックス中央にする
   display: flex
@@ -25,17 +27,14 @@
   align-items: center
   background-color: $backColor
   width: 100%
-  height: 35px
-  // ボックスを下層に固定
-  position: absolute
-  bottom: 0
+  height: $footerHeight
   & > p
     display: block
     width: 100%
     color: $footerFontColor
     text-align: center
 
-// Logo.jsx
+// ----- トップ画像[Logo.jsx] -----
 .logo
   top: 0
   bottom: 0
@@ -43,12 +42,11 @@
   right: 0
   margin: auto
   width: max-content
-  height: auto
   padding-top: 20px
   & > img
     display: block
   & > .logo_img
-    -webkit-animation: logoG 8s ease-in-out 0s infinite normal
+    -webkit-animation: logo 8s ease-in-out 0s infinite normal
     animation: logo 8s ease-in-out 0s infinite normal
     transform-origin: center center
 
@@ -60,7 +58,7 @@
   100%
     transform: rotate3d(-1, -1, -1, 360deg)
 
-@-webkit-keyframes logoG
+@-webkit-keyframes logo
   0%
     -moz-transform: rotate3d(0, 0, 0, 0deg)
     -ms-transform: rotate3d(0, 0, 0, 0deg)
@@ -74,39 +72,41 @@
 // DrIcon.jsx
 .icon
 
-// ----- pages -----
+// --------------------------------------------------
+// pages
+// --------------------------------------------------
+// ----- トップページ[Top.jsx] -----
 .top_page
-  height: calc(100% - 35px)
   background-image: url("../images/top/dna_top.jpg")
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: cover
-  height: calc(100% - 35px)
 
+// ----- 診断結果ページ[Result.jsx] -----
 .result_page
+  background: #6f8a9c
 .message_area
 
-// ----- ui -----
-// TopSendName.jsx
+// --------------------------------------------------
+// ui
+// --------------------------------------------------
+// ----- ニックネーム入力フォーム[TopSendName.jsx] -----
 .from_name
   background: $formBackColor
   border: solid 5px $mainColor
   border-radius: 10px
   width: 90%
-  margin: 30px auto 0
+  margin: 30px auto 50px
   padding: 15px 0
   text-align: center
-
+// ラベル
 .label_name 
   font-size: 14px
   font-weight: bold
-
+// 入力フォーム
 input 
   & > .input_name
   height: 3em
   display: block
   margin: 10px auto
-
+// ボタン
 button.send_name
   width: 150px
   font-size: $fontSize

@@ -5,6 +5,7 @@ import { RESULT_PAGE } from 'config/route'
 // ----- JSX -----
 import Logo from 'components/layouts/Logo'
 import TopSendName from 'components/ui/TopSendName'
+import Footer from 'components/layouts/Footer'
 // ----- style -----
 import Style from 'stylesheet/style.module.sass'
 
@@ -15,9 +16,12 @@ class Top extends Component {
   
   render() {
     return (
-      <div className={Style.top_page}>
-        <Logo />
-        <TopSendName transition={this.handleClick}/>
+      <div className={`${Style.wrapper} ${Style.top_page}`}>
+        <div className={Style.main}>
+          <Logo />
+          <TopSendName transition={this.handleClick}/>
+        </div>
+        <Footer />
       </div>
     );
   }

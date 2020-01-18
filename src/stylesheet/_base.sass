@@ -5,16 +5,17 @@
 *
   font-family: 'M PLUS Rounded 1c', sans-serif
 
-html, body, div, footer, header
+html, body
   width: 100%
   height: 100%
 
-// 横揺れ防止
+// ----- 横揺れ防止 -----
 html, body
   overflow-x: hidden
   -webkit-overflow-scrolling: touch
   background-color: $backColor
 
+// ----- フォントデザイン -----
 p, label, input
   font-size: $fontSize
   line-height: $lineHeight
@@ -23,19 +24,44 @@ p, label, input
   overflow-wrap: break-word
   word-wrap: break-word
 
-// IOS用ズーム防止
+// ----- IOS用ズーム防止 -----
 input[type=text], input[type=submit]
   font-size: $fontSize
   transform: scale(0.8)
 
+// ----- メイン画像サイズ -----
 .logo > img
   width: $topImageWidth
+
+//
+.data_time
+
+// ----- ページレイアウト -----
+.wrapper
+  height: 100%
+  // min-height: 100vh
+  position: relative
+  box-sizing: border-box
+  margin: 0
+  display: flex
+  flex-flow: column
+
+// メインコンテンツ
+.main
+  flex: 1
+.top_page, .result_page
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
 
 // 480px〜599px：SP横
 // ----------------------------------------------------------
 @media screen and (min-width:480px) and (max-width:599px)
   input[type=text], input[type=submit]
     font-size: ($fontSize + 2px)
+
+  .wrapper
+    min-height: 100vh
   
   .logo > img
     width: ($topImageWidth + 120px)
@@ -45,6 +71,9 @@ input[type=text], input[type=submit]
 @media screen and (min-width:600px) and (max-width:959px)
   input[type=text], input[type=submit]
     font-size: ($fontSize + 4px)
+  
+  .wrapper
+    min-height: 100vh
 
   .logo > img
     width: ($topImageWidth + 240px)
@@ -54,6 +83,9 @@ input[type=text], input[type=submit]
 @media screen and (min-width:960px)
   input[type=text], input[type=submit]
     font-size: ($fontSize + 6px)
+
+  .wrapper
+    min-height: 100vh
 
   .logo > img
     width: ($topImageWidth + 190px)

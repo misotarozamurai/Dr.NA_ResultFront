@@ -5,6 +5,7 @@ import Header from 'components/layouts/Header'
 import LineUserName from 'components/ui/LineUserName'
 import GetResultContainer from 'containers/GetResultContainer'
 import LineLastMessage from 'components/ui/LineLastMessage'
+import Footer from 'components/layouts/Footer'
 // ----- style -----
 import Style from 'stylesheet/style.module.sass'
 
@@ -18,6 +19,7 @@ class Result extends Component {
           <GetResultContainer />
           <LineLastMessage />
         </div>
+        <Footer />
       </div>
     );
   }
