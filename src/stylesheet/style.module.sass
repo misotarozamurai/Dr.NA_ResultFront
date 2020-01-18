@@ -1,10 +1,11 @@
+@import ./variables
 @import ./reet-style
 @import ./_base
 @import ./common
 
-
 // App.jsx
 .app
+
 
 // Routes.jsx
 .wrapper
@@ -12,27 +13,116 @@
 // ----- layouts -----
 // Header.jsx
 .header
+  background: $backColor
+  height: 30px
 .header_title
+
 // Footer.jsx
 .footer
+  // テキストをボックス中央にする
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $backColor
+  width: 100%
+  height: 35px
+  // ボックスを下層に固定
+  position: absolute
+  bottom: 0
+  & > p
+    display: block
+    width: 100%
+    color: $footerFontColor
+    text-align: center
+
 // Logo.jsx
 .logo
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  width: max-content
+  height: auto
+  padding-top: 20px
   & > img
-    width: 100px
+    display: block
+  & > .logo_img
+    -webkit-animation: logoG 8s ease-in-out 0s infinite normal
+    animation: logo 8s ease-in-out 0s infinite normal
+    transform-origin: center center
+
+@keyframes logo
+  0%
+    transform: rotate3d(0, 0, 0, 0deg)
+  33%
+    transform: rotate3d(0, 0, 0, 0deg)
+  100%
+    transform: rotate3d(-1, -1, -1, 360deg)
+
+@-webkit-keyframes logoG
+  0%
+    -moz-transform: rotate3d(0, 0, 0, 0deg)
+    -ms-transform: rotate3d(0, 0, 0, 0deg)
+  33%
+    -moz-transform: rotate3d(0, 0, 0, 0deg)
+    -ms-transform: rotate3d(0, 0, 0, 0deg)
+  100%
+    -moz-transform: rotate3d(-1, -1, -1, 360deg)
+    -ms-transform: rotate3d(-1, -1, -1, 360deg)
+
 // DrIcon.jsx
 .icon
 
 // ----- pages -----
 .top_page
+  height: calc(100% - 35px)
+  background-image: url("../images/top/dna_top.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  height: calc(100% - 35px)
+
 .result_page
 .message_area
 
 // ----- ui -----
 // TopSendName.jsx
 .from_name
-.label_name
-.input_name
-.send_name
+  background: $formBackColor
+  border: solid 5px $mainColor
+  border-radius: 10px
+  width: 90%
+  margin: 30px auto 0
+  padding: 15px 0
+  text-align: center
+
+.label_name 
+  font-size: 14px
+  font-weight: bold
+
+input 
+  & > .input_name
+  height: 3em
+  display: block
+  margin: 10px auto
+
+button.send_name
+  width: 150px
+  font-size: $fontSize
+  color: $formButtonFontColor
+  font-weight: bold
+  text-decoration: none
+  text-align: center
+  display: block
+  padding: 8px 0 10px
+  margin: 0 auto
+  background-color: $BtnBackColor
+  border-radius: 5px
+  &[disabled]
+    background-color: $BtnDisabledBackColor
+    
 
 // ResultDisplay
 .inner_message_area
+
