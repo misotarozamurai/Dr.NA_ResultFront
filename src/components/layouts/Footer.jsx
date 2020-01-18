@@ -1,11 +1,11 @@
 import React from 'react'
+// ----- style -----
+import Style from 'stylesheet/style.module.sass'
 
-const Footer = () => {
+export default () => {
   return (
-    <footer className='footer'>
+    <footer className={Style.footer}>
       <p>&copy;2020 Dr.NA</p>
     </footer>
   );
 }
-
-export default Footer;
