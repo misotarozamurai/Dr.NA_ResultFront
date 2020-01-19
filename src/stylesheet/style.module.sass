@@ -9,46 +9,60 @@
 .app_result
 
 // --------------------------------------------------
-// layouts
+// トップページ
 // --------------------------------------------------
-// Header.jsx
-.header
-  background: $backColor
-  height: $headerHeight
-.header_title
-  width: $headerTitleWidth
-
-
-// ----- フッター[Footer.jsx] -----
-.footer
-  // テキストをボックス中央にする
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: $backColor
-  width: 100%
-  height: $footerHeight
-  & > p
-    display: block
-    width: 100%
-    color: $footerFontColor
-    text-align: center
-
-// ----- トップ画像[Logo.jsx] -----
-.logo
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  margin: auto
-  width: max-content
-  padding-top: 20px
-  & > img
-    display: block
-  & > .logo_img
-    -webkit-animation: logo 8s ease-in-out 0s infinite normal
-    animation: logo 8s ease-in-out 0s infinite normal
-    transform-origin: center center
+// ----- トップページ[pages/Top.jsx] -----
+.top_page
+  background-image: url("../images/top/dna_top.jpg")
+  & > .main
+    // ----- トップ画像[layouts/Logo.jsx] -----
+    & > .logo
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      width: max-content
+      padding-top: 20px
+      & > img
+        display: block
+      & > .logo_img
+        -webkit-animation: logo 8s ease-in-out 0s infinite normal
+        animation: logo 8s ease-in-out 0s infinite normal
+        transform-origin: center center
+    // ----- ニックネーム入力フォーム[ui/TopSendName.jsx] -----
+    & > .from_name
+      background: $formBackColor
+      border: solid 5px $mainColor
+      border-radius: 10px
+      width: 90%
+      margin: 30px auto 50px
+      padding: 15px 0
+      text-align: center
+      // ラベル
+      & > .label_name 
+        font-size: 14px
+        font-weight: bold
+      // 入力フォーム
+      & > input.input_name
+        height: 3em
+        display: block
+        margin: 10px auto
+      // ボタン
+      & > button.send_name
+        width: 150px
+        font-size: $fontSize
+        color: $formButtonFontColor
+        font-weight: bold
+        text-decoration: none
+        text-align: center
+        display: block
+        padding: 8px 0 10px
+        margin: 10px auto 0
+        background-color: $BtnBackColor
+        border-radius: 5px
+        &[disabled]
+          background-color: $BtnDisabledBackColor
 
 @keyframes logo
   0%
@@ -57,7 +71,6 @@
     transform: rotate3d(0, 0, 0, 0deg)
   100%
     transform: rotate3d(-1, -1, -1, 360deg)
-
 @-webkit-keyframes logo
   0%
     -moz-transform: rotate3d(0, 0, 0, 0deg)
@@ -69,60 +82,53 @@
     -moz-transform: rotate3d(-1, -1, -1, 360deg)
     -ms-transform: rotate3d(-1, -1, -1, 360deg)
 
-// DrIcon.jsx
-.icon
-
 // --------------------------------------------------
-// pages
+// 診断結果ページ
 // --------------------------------------------------
-// ----- トップページ[Top.jsx] -----
-.top_page
-  background-image: url("../images/top/dna_top.jpg")
-
-// ----- 診断結果ページ[Result.jsx] -----
+// ----- 診断結果ページ[Pages/Result.jsx] -----
 .result_page
   background: #6f8a9c
-.message_area
-
-// --------------------------------------------------
-// ui
-// --------------------------------------------------
-// ----- ニックネーム入力フォーム[TopSendName.jsx] -----
-.from_name
-  background: $formBackColor
-  border: solid 5px $mainColor
-  border-radius: 10px
-  width: 90%
-  margin: 30px auto 50px
-  padding: 15px 0
-  text-align: center
-// ラベル
-.label_name 
-  font-size: 14px
-  font-weight: bold
-// 入力フォーム
-input 
-  & > .input_name
-  height: 3em
-  display: block
-  margin: 10px auto
-// ボタン
-button.send_name
-  width: 150px
-  font-size: $fontSize
-  color: $formButtonFontColor
-  font-weight: bold
-  text-decoration: none
-  text-align: center
-  display: block
-  padding: 8px 0 10px
-  margin: 0 auto
-  background-color: $BtnBackColor
-  border-radius: 5px
-  &[disabled]
-    background-color: $BtnDisabledBackColor
+  overflow: hidden
+  height: 100%
+  // ----- ヘッダー[layouts/Header.jsx] -----
+  & > .header
+    background: $backColor
+    height: $headerHeight
+    position: fixed
+    width: 100%
+    z-index: 100
+    & > .header_item
+      position: relative
+      margin: 0 auto
+      width: 90%
+      height: 100%
+      & > .header_title, .date_time
+        position: absolute
+      & > .header_title
+        width: $headerTitleWidth
+        height: $headerHeight - 15px
+        top: 15%
+      & > .date_time
+        font-size: 12px
+        bottom: 15%
+        right: 0
+  // ----- 診断結果表示エリア -----
+  & > .message_area
+    overflow: hidden
+    line-height: 135%
+    padding-top: $headerHeight
+    padding-bottom: $footerHeight
+    &.scroll 
+      height: calc((100vh - #{$headerHeight}) - #{$footerHeight})
+      overflow-y: scroll
+  // フッターを固定
+  & > footer
+    position: fixed
+    bottom: 0
+  
+// DrIcon.jsx
+.icon
     
-
 // ResultDisplay
 .inner_message_area
 

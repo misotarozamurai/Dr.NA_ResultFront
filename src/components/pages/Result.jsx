@@ -14,7 +14,7 @@ class Result extends Component {
     return (
       <div className={Style.result_page}>
         <Header dateTime={this.props.time}/>
-        <div className={Style.message_area}>
+        <div className={`${Style.message_area} ${Style.scroll}`}>
           <LineUserName />
           <GetResultContainer />
           <LineLastMessage />

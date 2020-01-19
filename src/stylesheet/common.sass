@@ -3,6 +3,21 @@
 // Common style sheet
 //-----------------------------------------------------------------------------------
 
+// ----- フッター[layouts/Footer.jsx] -----
+footer.footer
+  // テキストをボックス中央にする
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $backColor
+  width: 100%
+  height: $footerHeight
+  & > p
+    display: block
+    width: 100%
+    color: $footerFontColor
+    text-align: center
+
 .display_message
 .display_text_box
 .display_text_line

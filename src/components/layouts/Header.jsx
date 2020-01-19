@@ -8,10 +8,14 @@ export default class Header extends Component {
   render() {
     return (
       <header className={Style.header}>
-        <img src={LogoTitle} alt="App Title" className={Style.header_title}/>
-        <time dateTime={this.props.dateTime} className={Style.data_time}>
-          {this.props.dateTime.replace(/-/g, '/')}
-        </time>
+        <div className={Style.header_item}>
+          <img src={LogoTitle} alt="App Title" className={Style.header_title}/>
+          <p  className={Style.date_time}>診断日：
+            <time dateTime={this.props.dateTime}>
+              {this.props.dateTime.replace(/-/g, '/')}
+            </time>
+          </p>
+        </div>
       </header>
     );
   }
