@@ -22,14 +22,17 @@ name : Masakatsu Shibata
 
 ## ■ 使い方
 
-### ① ニックネーム(名前)を入力してください
+### １. ニックネーム(名前)を入力してください
 
 - 下記画面の入力フォームにてニックネーム(名前)を入力してください。<br />
 入力をした後、ボタンを押してください。
 
-  <img src="./images/page_1.jpg" alt="Top Page" width=200>
+  <img src="./images/page_1.png" alt="Top Page" width=300>
 
+### １. Dr&#46;NAが診断結果を解説します
 
+- Dr&#46;NAが診断した結果をお伝えしてくれます。
 
+  <img src="./images/page_2.png" alt="Result Page" width=300>
 
 <p>&copy;2020 Dr.NA_ResultFront</p>
