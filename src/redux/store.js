@@ -4,14 +4,19 @@ import { createStore, applyMiddleware } from 'redux'
 import rootReducer from 'redux/reducers'
 import { getResult } from 'redux/selectors/result'
 
-const logger = createLogger({
-  diff: true,
-  collapsed:true,
-});
+const middlewares = [];
+
+if(process.env.NODE_ENV !== 'production') {
+  const logger = createLogger({
+    diff: true,
+    collapsed:true,
+  });
+  middlewares.push(logger)
+}
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk, logger)
+  applyMiddleware(thunk, ...middlewares)
 );
 
 store.dispatch(getResult());
