@@ -3,19 +3,25 @@
 // Common style sheet
 //-----------------------------------------------------------------------------------
 
+html, body, footer.footer, header.header
+  background-color: $backColor
+
+footer.footer, .date, .name, .time
+  color: $fontSubColor
+
 // ----- フッター[layouts/Footer.jsx] -----
 footer.footer
   // テキストをボックス中央にする
   display: flex
   justify-content: center
   align-items: center
-  background-color: $backColor
   width: 100%
   height: $footerHeight
   & > p
     display: block
     width: 100%
-    color: $footerFontColor
+    color: $fontSubColor
+    font-size: 80%
     text-align: center
 
 // ----- Dr.NAアイコン[layout/DrIcon.jsx] -----
