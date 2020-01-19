@@ -10,7 +10,7 @@ export default class Header extends Component {
       <header className={Style.header}>
         <div className={Style.header_item}>
           <img src={LogoTitle} alt="App Title" className={Style.header_title}/>
-          <p  className={Style.date_time}>診断日：
+          <p  className={Style.date}>診断日：
             <time dateTime={this.props.dateTime}>
               {this.props.dateTime.replace(/-/g, '/')}
             </time>

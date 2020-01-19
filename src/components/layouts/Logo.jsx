@@ -7,9 +7,9 @@ import Style from 'stylesheet/style.module.sass'
 
 export default () => {
   return (
-    <div className={Style.logo}>
+    <figure className={Style.logo}>
       <img src={Logo} alt='logo' className={Style.logo_img}/>
       <img src={Title} alt='logo title'/>
-    </div>
+    </figure>
   );
 }

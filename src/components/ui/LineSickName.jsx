@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { DISPLAY_RESULT_SICK_NAME } from 'config/text'
 // ----- JSX -----
 import DrIcon from 'components/layouts/DrIcon'
+import Time from 'components/layouts/Time'
 // ----- style -----
 import Style from 'stylesheet/style.module.sass'
 
@@ -12,7 +13,11 @@ class LineSickName extends Component {
       <div className={Style.display_message}>
         <DrIcon />
         <div className={Style.display_text_box}>
-          {SickNameElement(this.props.name, this.props.sick)}
+          <p className={Style.name}>{process.env.REACT_APP_NAME}</p>
+          <div className={Style.line_area}>
+            {SickNameElement(this.props.name, this.props.sick)}
+            <Time />
+          </div>
         </div>
       </div>
     );
