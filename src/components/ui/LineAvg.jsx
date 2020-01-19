@@ -29,9 +29,9 @@ const AvgElement = avg => {
 }
 
 const AvgResult = avg => {
-  if(avg >= 59) {
+  if(avg <= 59) {
     return DISPLAY_RESULT_AVG.slow;
-  } else if(avg <= 91) {
+  } else if(91 <= avg) {
     return DISPLAY_RESULT_AVG.early;
   }
   return DISPLAY_RESULT_AVG.standard;
