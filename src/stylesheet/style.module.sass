@@ -3,66 +3,62 @@
 @import ./_base
 @import ./common
 
-// App.jsx
-.app
-
-.app_result
-
 // --------------------------------------------------
 // トップページ
 // --------------------------------------------------
 // ----- トップページ[pages/Top.jsx] -----
 .top_page
   background-image: url("../images/top/dna_top.jpg")
-  & > .main
-    // ----- トップ画像[layouts/Logo.jsx] -----
-    & > .logo
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      margin: auto
-      width: max-content
-      padding-top: 20px
-      & > img
+  // ----- トップ画像[layouts/Logo.jsx] -----
+  & > .logo
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: max-content
+    padding-top: 20px
+    & > img
+      display: block
+    & > .logo_img
+      -webkit-animation: logo 8s ease-in-out 0s infinite normal
+      animation: logo 8s ease-in-out 0s infinite normal
+      transform-origin: center center
+  // ----- ニックネーム入力フォーム[ui/TopSendName.jsx] -----
+  & > .from_name
+    background: $formBackColor
+    border: solid 5px $mainColor
+    border-radius: 10px
+    width: 90%
+    margin: 30px auto 50px
+    padding: 15px 0
+    text-align: center
+    // 名前ラベル
+    & > .label_name 
+      font-size: 14px
+      font-weight: bold
+      // 名前入力フォーム
+      & > .input_name
         display: block
-      & > .logo_img
-        -webkit-animation: logo 8s ease-in-out 0s infinite normal
-        animation: logo 8s ease-in-out 0s infinite normal
-        transform-origin: center center
-    // ----- ニックネーム入力フォーム[ui/TopSendName.jsx] -----
-    & > .from_name
-      background: $formBackColor
-      border: solid 5px $mainColor
-      border-radius: 10px
-      width: 90%
-      margin: 30px auto 50px
-      padding: 15px 0
-      text-align: center
-      // ラベル
-      & > .label_name 
-        font-size: 14px
-        font-weight: bold
-      // 入力フォーム
-      & > input.input_name
+        margin: 0 auto
         height: 3em
         display: block
         margin: 10px auto
-      // ボタン
-      & > button.send_name
-        width: 150px
-        font-size: $fontSize
-        color: $formButtonFontColor
-        font-weight: bold
-        text-decoration: none
-        text-align: center
-        display: block
-        padding: 8px 0 10px
-        margin: 10px auto 0
-        background-color: $BtnBackColor
-        border-radius: 5px
-        &[disabled]
-          background-color: $BtnDisabledBackColor
+    // 送信ボタン
+    & > button.send_name
+      width: 150px
+      font-size: $fontSize
+      color: $formButtonFontColor
+      font-weight: bold
+      text-decoration: none
+      text-align: center
+      display: block
+      padding: 8px 0 10px
+      margin: 10px auto 0
+      background-color: $BtnBackColor
+      border-radius: 5px
+      &[disabled]
+        background-color: $BtnDisabledBackColor
 
 @keyframes logo
   0%
@@ -94,41 +90,64 @@
   & > .header
     background: $backColor
     height: $headerHeight
-    position: fixed
     width: 100%
-    z-index: 100
     & > .header_item
       position: relative
-      margin: 0 auto
-      width: 90%
       height: 100%
-      & > .header_title, .date_time
+      & > .header_title, .date
         position: absolute
       & > .header_title
         width: $headerTitleWidth
         height: $headerHeight - 15px
         top: 15%
-      & > .date_time
-        font-size: 12px
+      // 診断日
+      & > .date
+        font-size: 80%
         bottom: 15%
         right: 0
   // ----- 診断結果表示エリア -----
   & > .message_area
     overflow: hidden
-    line-height: 135%
-    padding-top: $headerHeight
     padding-bottom: $footerHeight
     &.scroll 
-      height: calc((100vh - #{$headerHeight}) - #{$footerHeight})
       overflow-y: scroll
-  // フッターを固定
-  & > footer
-    position: fixed
-    bottom: 0
-  
-// DrIcon.jsx
-.icon
-    
-// ResultDisplay
-.inner_message_area
-
+// ----- メッセージ表示領域 -----
+.display_message
+  padding-top: 15px 
+  position: relative
+  display: flex
+  margin-bottom: 10px
+  // ----- テキスト表示 -----
+  & > .display_text_box
+    margin-left: 15px
+    width: 80%
+    & > .name
+      font-size: 80%
+      margin-left: 10px
+      color: $fontSubColor
+    & > .line_area
+      display: flex
+      // ----- 吹き出しBOX -----
+      & > .display_text_line
+        width: 100%
+        margin: 0
+        position: relative
+        padding: 13px
+        border-radius: 20px
+        background-color: $SisplayMessageBoxColor
+        // ----- 吹き出し -----
+        &::after 
+          content: ""
+          display: inline-block
+          position: absolute
+          top: 3px
+          left: -19px
+          border: 8px solid transparent
+          border-right: 18px solid $SisplayMessageBoxColor
+          -webkit-transform: rotate(35deg)
+          transform: rotate(35deg)
+      // ----- メッセージ表示時間 -----
+      & > .time
+        color: $fontSubColor
+        font-size: 60%
+        margin: auto 0 10px 5px

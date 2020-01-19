@@ -18,8 +18,18 @@ footer.footer
     color: $footerFontColor
     text-align: center
 
-.display_message
-.display_text_box
-.display_text_line
+// ----- Dr.NAアイコン[layout/DrIcon.jsx] -----
+.icon
+  padding-top: 15px
+  & > img
+    border-radius: 50%
+    border: 1px solid $mainColor
+    width:  40px
+    height: 40px
+    padding: 3px
+    background: #eee
 
-.inner_message_area
+// ----- 横幅を合わせる -----
+.header_item, .from_name, .display_message
+  width: 90%
+  margin: auto
