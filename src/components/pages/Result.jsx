@@ -35,7 +35,7 @@ class Result extends Component {
 const mapStateToProps = state => {
   const length = state.result.length;
   const current_state = state.result[length - 1];
-  const time = current_state.data.jsonObj['datatime'];
+  const time = current_state.data.jsonObj['datetime'];
   return {time: time};
 }
 
