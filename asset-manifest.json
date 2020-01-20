@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Dr.NA_ResultFront/static/css/main.6439de98.chunk.css",
-    "main.js": "/Dr.NA_ResultFront/static/js/main.5d7d3a33.chunk.js",
-    "main.js.map": "/Dr.NA_ResultFront/static/js/main.5d7d3a33.chunk.js.map",
+    "main.css": "/Dr.NA_ResultFront/static/css/main.99fc3de7.chunk.css",
+    "main.js": "/Dr.NA_ResultFront/static/js/main.053d26b0.chunk.js",
+    "main.js.map": "/Dr.NA_ResultFront/static/js/main.053d26b0.chunk.js.map",
     "runtime-main.js": "/Dr.NA_ResultFront/static/js/runtime-main.91b30654.js",
     "runtime-main.js.map": "/Dr.NA_ResultFront/static/js/runtime-main.91b30654.js.map",
     "static/js/2.df1b356c.chunk.js": "/Dr.NA_ResultFront/static/js/2.df1b356c.chunk.js",
     "static/js/2.df1b356c.chunk.js.map": "/Dr.NA_ResultFront/static/js/2.df1b356c.chunk.js.map",
     "index.html": "/Dr.NA_ResultFront/index.html",
-    "precache-manifest.9d70b49588038c54aa60e43b36a04df7.js": "/Dr.NA_ResultFront/precache-manifest.9d70b49588038c54aa60e43b36a04df7.js",
+    "precache-manifest.512c1ff0b46a33dacae5ee2cda7c45f8.js": "/Dr.NA_ResultFront/precache-manifest.512c1ff0b46a33dacae5ee2cda7c45f8.js",
     "service-worker.js": "/Dr.NA_ResultFront/service-worker.js",
-    "static/css/main.6439de98.chunk.css.map": "/Dr.NA_ResultFront/static/css/main.6439de98.chunk.css.map",
+    "static/css/main.99fc3de7.chunk.css.map": "/Dr.NA_ResultFront/static/css/main.99fc3de7.chunk.css.map",
     "static/js/2.df1b356c.chunk.js.LICENSE": "/Dr.NA_ResultFront/static/js/2.df1b356c.chunk.js.LICENSE",
     "static/media/style.module.sass": "/Dr.NA_ResultFront/static/media/dna_top.817c7a3d.jpg",
     "static/media/icon.png": "/Dr.NA_ResultFront/static/media/icon.413a269f.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.91b30654.js",
     "static/js/2.df1b356c.chunk.js",
-    "static/css/main.6439de98.chunk.css",
-    "static/js/main.5d7d3a33.chunk.js"
+    "static/css/main.99fc3de7.chunk.css",
+    "static/js/main.053d26b0.chunk.js"
   ]
 }
