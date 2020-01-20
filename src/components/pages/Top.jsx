@@ -9,10 +9,10 @@ import Footer from 'components/layouts/Footer'
 // ----- style -----
 import Style from 'stylesheet/style.module.sass'
 
-const height = { 
-  // Subtract footer height
-  height: document.body.clientHeight - 35
-};
+// const height = { 
+//   // Subtract footer height
+//   height: document.body.clientHeight - 35
+// };
 
 class Top extends Component {
   handleClick = () => {
@@ -23,7 +23,8 @@ class Top extends Component {
     return (
       // <div className={`${Style.wrapper} ${Style.top_page}`}>
       <div className={Style.wrapper}>
-        <div className={`${Style.main} ${Style.top_page}`} style={height}>
+        {/* <div className={`${Style.main} ${Style.top_page} ${Style.scroll}`} style={height}> */}
+        <div className={`${Style.main} ${Style.top_page} `}>
           <Logo />
           <TopSendName transition={this.handleClick}/>
         </div>
